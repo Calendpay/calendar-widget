@@ -6,7 +6,7 @@ import path from "path";
 export default defineConfig({
   plugins: [react()],
   define: {
-    "process.env": {}, // Definiujemy pusty obiekt dla `process.env`
+    "process.env.NODE_ENV": "production",
   },
   build: {
     lib: {
