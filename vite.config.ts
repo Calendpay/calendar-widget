@@ -5,9 +5,9 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  define: {
-    "process.env.NODE_ENV": "production", // Zamień process.env.NODE_ENV //wymagane aby działało poprawnie
-  },
+  // define: {
+  //   "process.env.NODE_ENV": "production", // Zamień process.env.NODE_ENV //wymagane aby działało poprawnie
+  // },
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/main.tsx"), // Główny plik wejściowy React/TypeScript
@@ -15,13 +15,13 @@ export default defineConfig({
       fileName: (format) => `calendpay-widget.${format}.js`,
       formats: ["umd"], // Format outputu (UMD dla kompatybilności z osadzaniem w HTML)
     },
-    rollupOptions: {
-      output: {
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-        },
-      },
-    },
+    // rollupOptions: {
+    //   output: {
+    //     globals: {
+    //       react: "React",
+    //       "react-dom": "ReactDOM",
+    //     },
+    //   },
+    // },
   },
 });
