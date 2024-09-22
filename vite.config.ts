@@ -6,7 +6,7 @@ import path from "path";
 export default defineConfig({
   plugins: [react()],
   define: {
-    "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV), // Zamień process.env.NODE_ENV //wymagane aby działało poprawnie
+    "process.env.NODE_ENV": "production", // Zamień process.env.NODE_ENV //wymagane aby działało poprawnie
   },
   build: {
     lib: {
@@ -16,7 +16,6 @@ export default defineConfig({
       formats: ["umd"], // Format outputu (UMD dla kompatybilności z osadzaniem w HTML)
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
       output: {
         globals: {
           react: "React",
