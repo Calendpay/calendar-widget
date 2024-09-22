@@ -10,8 +10,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: "src/main.tsx", // Główny plik wejściowy React/TypeScript
-      name: "CalendpayWidget", // Nazwa eksportowanej biblioteki
-      fileName: (format) => `calendpay-widget.${format}.js`,
+      name: "CalendarWidget", // Nazwa eksportowanej biblioteki
+      fileName: (format) => `calendar-widget.${format}.js`,
       formats: ["umd"], // Format outputu (UMD dla kompatybilności z osadzaniem w HTML)
     },
     rollupOptions: {
