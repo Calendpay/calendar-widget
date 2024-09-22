@@ -1,7 +1,5 @@
 import { createRoot } from "react-dom/client";
 import "./index.css";
-
-import React from "react";
 import AppointmentContent from "./AppointmentContent.tsx"; // Twój główny komponent
 
 // Funkcja, która osadza kalendarz w dowolnym elemencie HTML
@@ -18,12 +16,12 @@ const renderCalendarWidget = (props: {
 
   const root = createRoot(container); // Tworzy root dla React 18
   root.render(
-    <React.StrictMode>
-      <AppointmentContent
-        productId={props.productId}
-        organizationId={props.organizationId}
-      />
-    </React.StrictMode>
+    // <React.StrictMode>
+    <AppointmentContent
+      productId={props.productId}
+      organizationId={props.organizationId}
+    />
+    // </React.StrictMode>
   );
 };
 
