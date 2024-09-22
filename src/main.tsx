@@ -2,6 +2,14 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import AppointmentContent from "./AppointmentContent.tsx"; // Twój główny komponent
 
+if (typeof process === "undefined") {
+  (window as any).process = {
+    env: {
+      NODE_ENV: "production",
+    },
+  };
+}
+
 // Funkcja, która osadza kalendarz w dowolnym elemencie HTML
 const renderCalendarWidget = (props: {
   containerId: string;

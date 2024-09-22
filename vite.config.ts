@@ -13,7 +13,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, "src/main.tsx"), // Główny plik wejściowy React/TypeScript
       name: "CalendpayWidget", // Nazwa eksportowanej biblioteki
       fileName: (format) => `calendpay-widget.${format}.js`,
-      formats: ["iife", "umd"], // Format outputu (UMD dla kompatybilności z osadzaniem w HTML)
+      formats: ["umd"], // Format outputu (UMD dla kompatybilności z osadzaniem w HTML)
     },
     rollupOptions: {
       output: {
