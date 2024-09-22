@@ -1,0 +1,14 @@
+  <!-- Kontener, do którego widget zostanie osadzony -->
+  <div id="appointment-widget"></div>
+
+  <!-- Załaduj widget z CDN -->
+  <script src="https://cdn.jsdelivr.net/gh/Calendpay/calendar-widget/dist/calendpay-widget.umd.js"></script>
+
+  <!-- Uruchomienie widgetu -->
+  <script>
+    CalendpayWidget.renderCalendarWidget({
+      containerId: 'appointment-widget', // ID kontenera w HTML
+      productId: '12345',                // ID produktu, może być dynamiczny
+      organizationId: 'abcde'            // ID organizacji, może być dynamiczny
+    });
+  </script>

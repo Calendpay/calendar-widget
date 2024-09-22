@@ -14,7 +14,7 @@ export default defineConfig({
     },
     rollupOptions: {
       // Ustawienia, jak traktować zewnętrzne zależności
-      external: ["react", "react-dom"],
+      // external: ["react", "react-dom"],
       output: {
         globals: {
           react: "React",
