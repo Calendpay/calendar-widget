@@ -1,6 +1,24 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
+// import { terser } from "rollup-plugin-terser";
+
+// Plugin do wstrzykiwania kodu
+const injectProcess = {
+  name: "inject-process",
+  renderChunk(code: any) {
+    const processCode = `
+      if (typeof process === 'undefined') {
+        window.process = {
+          env: {
+            NODE_ENV: 'production',
+          }
+        };
+      }
+    `;
+    return processCode + code; // Wstrzyknij kod przed resztą
+  },
+};
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -21,7 +39,7 @@ export default defineConfig({
           react: "React",
           "react-dom": "ReactDOM",
         },
-        name: "CalendpayWidget",
+        plugins: [injectProcess], // Dodaj plugin wstrzykujący
       },
     },
   },
