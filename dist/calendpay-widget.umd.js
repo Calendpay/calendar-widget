@@ -1,12 +1,4 @@
-
-      if (typeof process === 'undefined') {
-        window.process = {
-          env: {
-            NODE_ENV: 'production',
-          }
-        };
-      }
-    (function(Rn,On){typeof exports=="object"&&typeof module<"u"?On(exports):typeof define=="function"&&define.amd?define(["exports"],On):(Rn=typeof globalThis<"u"?globalThis:Rn||self,On(Rn.CalendpayWidget={}))})(this,function(Rn){"use strict";var On={exports:{}},er={},Io={exports:{}},T={};/**
+(function(Rn,On){typeof exports=="object"&&typeof module<"u"?On(exports):typeof define=="function"&&define.amd?define(["exports"],On):(Rn=typeof globalThis<"u"?globalThis:Rn||self,On(Rn.CalendpayWidget={}))})(this,function(Rn){"use strict";var On={exports:{}},er={},Io={exports:{}},T={};/**
  * @license React
  * react.production.min.js
  *
