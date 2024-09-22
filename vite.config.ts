@@ -6,7 +6,7 @@ import path from "path";
 export default defineConfig({
   plugins: [react()],
   define: {
-    "import.meta.env.NODE_ENV": "production", // Zamień process.env.NODE_ENV //wymagane aby działało poprawnie
+    "process.env.NODE_ENV": JSON.stringify("production"), // Zamień process.env.NODE_ENV //wymagane aby działało poprawnie
   },
   build: {
     lib: {
